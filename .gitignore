@@ -37,3 +37,7 @@ Thumbs.db
 *.swo 
 
 .history/
+encore.gen.go
+encore.gen.cue
+/.encore
+/encore.gen

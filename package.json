@@ -1,0 +1,23 @@
+{
+  "name": "wubba-lubba",
+  "version": "1.0.0",
+  "description": "Please arrive at **6:00 AM Singapore Time** on **April 16th**.",
+  "homepage": "https://github.com/mason-aug/wubba-lubba#readme",
+  "bugs": {
+    "url": "https://github.com/mason-aug/wubba-lubba/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mason-aug/wubba-lubba.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "encore.dev": "^1.46.17"
+  }
+}
