@@ -15,11 +15,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
     "encore.dev": "^1.46.17",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "vitest": "^1.2.1"
   }
 }
