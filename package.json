@@ -18,6 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "encore.dev": "^1.46.17"
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "encore.dev": "^1.46.17",
+    "zod": "^3.24.2"
   }
 }
