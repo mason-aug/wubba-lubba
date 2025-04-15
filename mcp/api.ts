@@ -89,12 +89,13 @@ export const sse = api.raw(
 export const messages = api.raw(
   { expose: true, path: "/messages", method: "POST" },
   async (req, res) => {
-    // Log the entire query for debugging
-    console.log("messages endpoint received query reqqq:", req.req.query);
-    // console.log("messages endpoint received  res:", res);
+
+    const searchParams = new URLSearchParams(req.url.split('?')[1]);
+    const sessionId = searchParams.get('sessionId');
+
     
     // Check if sessionId exists
-    if (!req.query.sessionId) {
+    if (!sessionId) {
       console.error("No sessionId provided in query parameters");
       res.writeHead(400, { "Content-Type": "application/json" });
       res.end(JSON.stringify({
@@ -103,7 +104,6 @@ export const messages = api.raw(
       return;
     }
     
-    const sessionId = req.query.sessionId as string;
     console.log(`Looking for transport with sessionId: ${sessionId}`);
     
     const transport = transports[sessionId];
