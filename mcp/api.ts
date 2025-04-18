@@ -33,7 +33,7 @@ const transports: {[sessionId: string]: SSEServerTransport} = {};
 
 // SSE endpoint
 export const sse = api.raw(
-  { expose: true, path: "/sse", method: "GET" },
+  { expose: true, path: "/sse", method: ["GET", "HEAD"] },
   async (req, res) => {
     // Set headers required for SSE
     res.writeHead(200, {
